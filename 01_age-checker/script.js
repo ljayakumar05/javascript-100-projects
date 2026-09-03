@@ -1,76 +1,45 @@
-console.log('Welocme JAI');
+let userInput = document.getElementById('date');
+userInput.max = new Date().toISOString().split("T")[0];
+let result = document.getElementById("result"); 
 
-let a, b, c;
+function calculateAge(){
+    let birthDate = new Date(userInput.value);
 
-a = 5;
-b = 2;
-c = a + b;
+    let d1 = birthDate.getDate();
+    let m1 = birthDate.getMonth() + 1;
+    let y1 = birthDate.getFullYear();
 
-console.log(c);
+    let today = new Date();
 
-document.getElementById('demo1').innerHTML ="Welcome Jai!";
+    let d2 = today.getDate();
+    let m2 = today.getMonth() + 1;
+    let y2 = today.getFullYear();
 
-console.log(typeof true);
+    let d3, m3, y3;
 
-console.log(14 === 14 || 8 <= 6);
+    y3 = y2 - y1;
 
-const isloggedIn = false; 
+    if(m2 >= m1){
+        m3 = m2 - m1;
+    }else{
+        y3--;
+        m3 = 12 + m2 - m1;
+    }
 
-console.log(!isloggedIn);
-
-let count = 5;
-count --;
-console.log(count);
-
-const age = 22;
-
-const result = age >= 18 ? "Adult" : "Minor";
-console.log(result);
-
-const firstName = "Jaya";
-const lastName = "kumar";
-console.log(firstName + " " +lastName);
-
-const Name = "jayakumar";
-const jkage = 30;
-console.log(`My name is ${Name} and I am ${jkage} year old.`)
-
-const day = "Monday";
-
-switch (day) {
-    case "Monday":
-        console.log("Start of week");
-        break;
-    case "Thursday":
-        console.log("Almost Weekend");
-        break;
+    if(d2 >= d1){
+        d3 = d2 - d1;
+    }else{
+        m3--;
+        d3 = getDaysInMonth(y1, m1) + d2 - d1;
+    }
+    if(m3 < 0){
+        m3 = 11;
+        y3--;
+    }
+    result.innerHTML = `Your are <span>${y3}</span> years,
+         <span>${m3}</span> months and <span>${d3}</span> days old`;
 }
 
-for (let i = 1; i <= 10; i++) {
-    console.log(i);
+function getDaysInMonth(year, month){
+    return new Date(year, month, 0).getDate();
 }
-
-for (let j = 5; j >= 1; j--){
-    console.log(j);
-}
-
-function greet(){
-    console.log("Hello!");
-}
-greet();
-
-function greets(name){
-    console.log(`Hello ${name}`);
-}
-greets("jai");
-
-function add(a, b){
-    console.log(a + b);
-}
-add(5, 6);
-
-function adds(a, b){
-    return a + b;
-}
-const resultval = adds(10, 20);
-console.log(resultval);
