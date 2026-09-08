@@ -3,5 +3,25 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+}
+body{
     background: linear-gradient(135deg, #4203a9, #90bafc);
+}
+.container{
+    margin: 50px auto;
+    padding: 50px;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.container h1{
+    margin-bottom: 30px;
+}
+#heading, #bmi-output, #message{
+    margin-top: 15px;
+    padding-top: 10px;
 }
