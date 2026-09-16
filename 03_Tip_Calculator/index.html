@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript-projects</title>
-    <link rel="stylesheet" href="/02_BMI_Calculator/style.css">
+    <link rel="stylesheet" href="/03_Tip_Calculator/style.css">
 </head>
-<body>
+
+<body class="full-container">
     <div class="container">
-    <h1>Tip Calculator - Javascript</h1>
+        <div class="container-form">
+            <h1>Tip Calculator - Javascript !</h1>
+            <p>Calculate your bill and split the tip</p>
+            
+            <div class="tip-form">
+                <div class="input-amount">
+                    <label class="amount-head">Bill Amount (₹)</label><br>
+                    <input type="number" class="amount-input" placeholder="Add Amount">
+                </div>
+                <div class="input-tip">
+                    <label class="amount-head">Section Tip</label><br>
+                    <ul class="amount-tip">
+                        <li class="amount-tip-list"><a class="tip-btn">5%</a></li>
+                        <li class="amount-tip-list"><a class="tip-btn">10%</a></li>
+                        <li class="amount-tip-list"><a class="tip-btn">15%</a></li>
+                        <li class="amount-tip-list"><a class="tip-btn">20%</a></li>
+                    </ul>
+                </div> 
+                <div class="input-people">
+                    <label class="amount-head">Number of People</label><br>
+                    <input type="number" class="amount-input" placeholder="Add people">
+                </div> 
+                <textarea rows="5" cols="5" class="tip-area" placeholder="Tip Amount and Total Bill"></textarea>  
+                <button class="reset-btn">Reset</button>
+            </div>
+        </div>
     </div>
 
-    <script src="/02_BMI_Calculator/script.js"></script>
+    <script src="/03_Tip_Calculator/script.js"></script>
 </body>
+
 </html>

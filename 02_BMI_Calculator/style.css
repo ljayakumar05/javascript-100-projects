@@ -17,6 +17,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 5px;
+    background-color: yellow;
 }
 .container h1{
     margin-bottom: 30px;
