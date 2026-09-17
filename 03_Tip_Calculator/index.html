@@ -17,7 +17,7 @@
             <div class="tip-form">
                 <div class="input-amount">
                     <label class="amount-head">Bill Amount (₹)</label><br>
-                    <input type="number" class="amount-input" placeholder="Add Amount">
+                    <input type="number" id="userAmount" class="amount-input" placeholder="Add Amount">
                 </div>
                 <div class="input-tip">
                     <label class="amount-head">Section Tip</label><br>
@@ -30,10 +30,12 @@
                 </div> 
                 <div class="input-people">
                     <label class="amount-head">Number of People</label><br>
-                    <input type="number" class="amount-input" placeholder="Add people">
+                    <input type="number" id="peopleList" class="amount-input" placeholder="Add people">
                 </div> 
-                <textarea rows="5" cols="5" class="tip-area" placeholder="Tip Amount and Total Bill"></textarea>  
-                <button class="reset-btn">Reset</button>
+                <textarea rows="5" cols="5" id="userValueDisplay" class="tip-area" placeholder="Tip Amount and Total Bill"></textarea>  
+                
+                <button class="reset-btn" id="submitBtn">Submit</button>
+                <button class="reset-btn" id="displayBtn">Display value</button>
             </div>
         </div>
     </div>
