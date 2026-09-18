@@ -1,6 +1,6 @@
 const billAmount = document.getElementById("userAmount");
-const displayValue = document.getElementById("peopleList")
 const tipButtons = document.querySelectorAll(".tip-btn");
+const displayValue = document.getElementById("peopleList")
 
 const submitBtn = document.getElementById("submitBtn");
 
