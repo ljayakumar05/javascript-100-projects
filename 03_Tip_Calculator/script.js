@@ -4,6 +4,8 @@ const displayValue = document.getElementById("peopleList")
 
 const submitBtn = document.getElementById("submitBtn");
 
+const resultDisplay = document.getElementById("userValueDisplay");
+
 let tipPercent = 0;
 
 //Tip button
@@ -45,7 +47,12 @@ submitBtn.addEventListener("click", ()=> {
     const perPerson = totalBill / people;
 
     console.log("Per Person:", perPerson);
-})
+
+    resultDisplay.value = `TotalBill Amount: ${totalBill}
+                           Tip Amount: ${tipAmount}
+                           Per person: ${perPerson}
+                           `;
+});
 
 
 
