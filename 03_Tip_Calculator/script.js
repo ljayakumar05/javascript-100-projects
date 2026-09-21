@@ -29,6 +29,26 @@ submitBtn.addEventListener("click", ()=> {
     const bill = Number(billAmount.value);
     const people = Number(displayValue.value);
 
+    // Check Bill
+    if(billAmount.value.trim() === ""){
+        alert("Please enter the bill amount");
+        billAmount.focus();
+        return;
+    }
+
+    // Check people
+    if(displayValue.value.trim() === ""){
+        alert("Please enter the number of people");
+        displayValue.focus();
+        return;
+    }
+
+    // Check tip
+    if(tipPercent === 0){
+        alert("Please select a tip percentage");
+        return;
+    }
+
     console.log("Bill:",bill);
     console.log("people:",people);
     console.log("Selected Tip:", tipPercent);
@@ -53,6 +73,8 @@ submitBtn.addEventListener("click", ()=> {
                            Per person: ${perPerson}
                            `;
 });
+
+
 
 
 
