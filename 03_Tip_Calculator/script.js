@@ -1,62 +1,70 @@
 const billAmount = document.getElementById("userAmount");
 const tipButtons = document.querySelectorAll(".tip-btn");
-const displayValue = document.getElementById("peopleList")
+const displayValue = document.getElementById("peopleList");
 
 const submitBtn = document.getElementById("submitBtn");
+const reloadBtn = document.getElementById("reloadBtn");
 
 const resultDisplay = document.getElementById("userValueDisplay");
 
 let tipPercent = 0;
+let tipSelected = false;
 
-//Tip button
+// Tip button
 tipButtons.forEach((button) => {
 
-    button.addEventListener("click", ()=> {
+    button.addEventListener("click", () => {
 
+        const tipText = button.textContent.trim();
 
-        const tipText = button.textContent;
+        if (tipText === "No Tip") {
+            tipPercent = 0;
+        } else {
+            tipPercent = Number(tipText.replace("%", ""));
+        }
 
-        // Update the Outside Variable
-        tipPercent = Number(tipText.replace("%", ""));
+        // Tip has been selected
+        tipSelected = true;
 
-        console.log("Selected Tip:", tipPercent);
+        console.log("Tip:", tipPercent);
     });
 });
 
+
 // Submit button
-submitBtn.addEventListener("click", ()=> {
+submitBtn.addEventListener("click", () => {
 
     const bill = Number(billAmount.value);
     const people = Number(displayValue.value);
 
     // Check Bill
-    if(billAmount.value.trim() === ""){
+    if (billAmount.value.trim() === "") {
         alert("Please enter the bill amount");
         billAmount.focus();
         return;
     }
 
-    // Check people
-    if(displayValue.value.trim() === ""){
+    // Check People
+    if (displayValue.value.trim() === "") {
         alert("Please enter the number of people");
         displayValue.focus();
         return;
     }
 
-    // Check tip
-    if(tipPercent === 0){
-        alert("Please select a tip percentage");
+    // Check Tip
+    if (!tipSelected) {
+        alert("Please select a tip");
         return;
     }
 
-    console.log("Bill:",bill);
-    console.log("people:",people);
+    console.log("Bill:", bill);
+    console.log("People:", people);
     console.log("Selected Tip:", tipPercent);
 
     // Calculate tip
     const tipAmount = bill * tipPercent / 100;
 
-    console.log("Tip Amount:",tipAmount);
+    console.log("Tip Amount:", tipAmount);
 
     // Calculate total bill
     const totalBill = bill + tipAmount;
@@ -68,14 +76,13 @@ submitBtn.addEventListener("click", ()=> {
 
     console.log("Per Person:", perPerson);
 
-    resultDisplay.value = `TotalBill Amount: ${totalBill}
-                           Tip Amount: ${tipAmount}
-                           Per person: ${perPerson}
-                           `;
+    // Display result
+    resultDisplay.value = `Total Bill Amount: ${totalBill}
+Tip Amount: ${tipAmount}
+Per Person: ${perPerson}`;
 });
 
-
-
-
-
-
+// Page reload btn
+reloadBtn.addEventListener("click", ()=> {
+    window.location.reload();
+});

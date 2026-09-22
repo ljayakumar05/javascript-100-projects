@@ -13,15 +13,17 @@
   background-size: cover;
 }
 .container{
-    width: 60%;
+    width: 70%;
     max-width: 1200px;
     margin: 100px auto;
-    background-color: aliceblue;
+    border-radius: 10px;
+    background-color: lightblue;
 }
 .container-form{
     border: 2px solid gray;
     
-    height: 750px;
+    height: 850px;
+    width: 510px;
     text-align: center;
     margin-top: 50px;
     border-radius: 5px;
@@ -35,9 +37,9 @@
     font-weight: 500;
 }
 .tip-form{
-    width: 80%;
+    width: 90%;
     margin: auto;
-    height: 600px;
+    height: 700px;
     border-radius: 5px;
     margin-top: 20px;
     border: 3px solid gray;
