@@ -49,3 +49,28 @@ console.log(number.repeat(5));
 const textFruts = "apple apple apple";
 
 console.log(textFruts.replaceAll("apple", "orange"));
+
+const numValue = 123.656;
+
+console.log(numValue.toFixed(0));
+
+const numValueRes = Number(numValue.toFixed(2));
+
+console.log(typeof numValueRes);
+
+const resultValue = addValue(100, 50);
+
+function addValue(a, b){
+    return a + b;
+}
+
+console.log(resultValue);
+
+console.log("start");
+
+setTimeout(() => {
+    console.log("Hellow");
+    alert("Welcome");
+}, 5000);
+
+console.log("end");
