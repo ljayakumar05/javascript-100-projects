@@ -74,3 +74,7 @@ setTimeout(() => {
 }, 5000);
 
 console.log("end");
+
+const toDay = new Date();
+
+console.log(toDay);
