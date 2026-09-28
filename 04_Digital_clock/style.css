@@ -76,3 +76,9 @@
 #sec::after{
     content: 'SEC';
 }
+
+.clock .formattext{
+    font-size: 48px;
+    padding-left: 35px;
+    padding-top: 28px;
+}
