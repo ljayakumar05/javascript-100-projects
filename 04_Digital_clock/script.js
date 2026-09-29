@@ -1,134 +1,65 @@
-//Get Dom elements time
-const hrs = document.getElementById("hrs");
-const min = document.getElementById("min");
-const sec = document.getElementById("sec");
+function UpdateClock() {
 
-const ampmValue = document.getElementById("format");
+    // Get DOM elements - time
+    const hrs = document.getElementById("hrs");
+    const min = document.getElementById("min");
+    const sec = document.getElementById("sec");
 
-//Get Dome elements date 
-const date = document.getElementById("date");
-const month = document.getElementById("month");
-const year = document.getElementById("year");   
+    const ampmValue = document.getElementById("format");
 
+    // Get DOM elements - date
+    const date = document.getElementById("date");
+    const month = document.getElementById("month");
+    const year = document.getElementById("year");
 
-setInterval(()=>{
     // Get current date and time
     const currentTime = new Date();
 
-    // Update Dom
-    hrs.textContent = String(currentTime.getHours()).padStart(2, "0");
+    // Get hours
+    let hours = currentTime.getHours();
+
+    // AM / PM
+    let ampm;
+
+    if (hours >= 12) {
+        ampm = "PM";
+    } else {
+        ampm = "AM";
+    }
+
+    // 12-hour format
+    if (hours === 0) {
+        hours = 12;
+    } else if (hours > 12) {
+        hours = hours - 12;
+    }
+
+    // Update time
+    hrs.textContent = String(hours).padStart(2, "0");
     min.textContent = String(currentTime.getMinutes()).padStart(2, "0");
     sec.textContent = String(currentTime.getSeconds()).padStart(2, "0");
 
-}, 1000);
+    // Update AM / PM
+    ampmValue.textContent = ampm;
 
-const now = new Date();
+    // Date
+    let dateValue = currentTime.getDate();
+    let monthValue = currentTime.getMonth() + 1;
+    let yearValue = currentTime.getFullYear();
 
-let hours = now.getHours();
+    // Add leading zero
+    dateValue = String(dateValue).padStart(2, "0");
+    monthValue = String(monthValue).padStart(2, "0");
 
-let ampm;
-
-if(hours >= 12){
-    ampm = "pm";
-    console.log("PM");
-}else {
-    ampm = "AM"
-    console.log("AM");
+    // Update date
+    date.textContent = dateValue;
+    month.textContent = monthValue;
+    year.textContent = yearValue;
 }
 
-ampmValue.innerHTML = ampm;
 
+// Run immediately
+UpdateClock();
 
-//Date Value
-
-let dateValue = now.getDate();
-let monthValue = now.getMonth() + 1;
-let yearValue = now.getFullYear();
-
-console.log(dateValue);
-console.log(monthValue);
-console.log(yearValue);
-
-dateValue = String(dateValue).padStart(2, "0");
-monthValue = String(monthValue).padStart(2, "0");
-
-date.textContent = dateValue;
-month.textContent = monthValue;
-year.textContent = yearValue; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const num = 100;
-
-// if (num < 15) {
-//     console.log("good number")
-// } else if (num === 15) 
-// {
-//     console.log("same number")
-// } else {
-//     console.log('Not a good number')
-// }
-
-// const age = 12;
-
-// age >= 18 ? console.log('Adult') : console.log('Not Adult');
-
-// const name = 'fdfsdfsdfsdjai';
-
-// console.log(name.length);
-
-// const myName = 'JAYAKUMAR';
-
-// console.log(myName.slice(0, 5));
-
-// console.log(myName.toLowerCase(myName));
-
-// const number = "5";
-
-// console.log(number.padStart(5, "0"));
-
-// console.log(number.repeat(5));
-
-// const textFruts = "apple apple apple";
-
-// console.log(textFruts.replaceAll("apple", "orange"));
-
-// const numValue = 123.656;
-
-// console.log(numValue.toFixed(0));
-
-// const numValueRes = Number(numValue.toFixed(2));
-
-// console.log(typeof numValueRes);
-
-// const resultValue = addValue(100, 50);
-
-// function addValue(a, b){
-//     return a + b;
-// }
-
-// console.log(resultValue);
-
-// console.log("start");
-
-// // setTimeout(() => {
-// //     console.log("Hellow");
-// //     alert("Welcome");
-// // }, 5000);
-
-// console.log("end");
-
-// const toDay = new Date();
-
-// console.log(toDay);
+// Run every 1 second
+setInterval(UpdateClock, 1000);

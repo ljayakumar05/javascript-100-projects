@@ -48,8 +48,8 @@
     background: lightseagreen;
     border-radius: 50%;
     position: absolute;
-    right: 5px;
-    top: 50px;
+    right: -15px;
+    top: -40px;
     z-index: -5;
 }
 .clock span{
@@ -84,7 +84,6 @@
 }
 
 /* date */
-
 .date{
     width: 100%;
     height: 180px;
