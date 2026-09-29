@@ -1,11 +1,16 @@
-//Get Dom elements
+//Get Dom elements time
 const hrs = document.getElementById("hrs");
 const min = document.getElementById("min");
 const sec = document.getElementById("sec");
 
 const ampmValue = document.getElementById("format");
 
-    
+//Get Dome elements date 
+const date = document.getElementById("date");
+const month = document.getElementById("month");
+const year = document.getElementById("year");   
+
+
 setInterval(()=>{
     // Get current date and time
     const currentTime = new Date();
@@ -34,6 +39,22 @@ if(hours >= 12){
 ampmValue.innerHTML = ampm;
 
 
+//Date Value
+
+let dateValue = now.getDate();
+let monthValue = now.getMonth() + 1;
+let yearValue = now.getFullYear();
+
+console.log(dateValue);
+console.log(monthValue);
+console.log(yearValue);
+
+dateValue = String(dateValue).padStart(2, "0");
+monthValue = String(monthValue).padStart(2, "0");
+
+date.textContent = dateValue;
+month.textContent = monthValue;
+year.textContent = yearValue; 
 
 
 

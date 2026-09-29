@@ -16,7 +16,7 @@
     width: 800px;
     height: 180px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -81,4 +81,49 @@
     font-size: 48px;
     padding-left: 35px;
     padding-top: 28px;
+}
+
+/* date */
+
+.date{
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+    padding-left: 90px;
+    background: rgba(235, 0, 255, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    backdrop-filter: blur(40px);
+}
+.dateMet::before{
+    content: 'hello';
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    border-radius: 5px;
+    position: absolute;
+    backdrop-filter: blur(40px);
+    left: 450px;
+    top: 280px;
+    z-index: -5;
+}
+.dateMet:after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: lightseagreen;
+    border-radius: 50%;
+    position: absolute;
+    right: 650px;
+    top: 220px;
+    z-index: -5;
+}
+.date span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
 }
