@@ -4,6 +4,8 @@ const secondHand = document.querySelector(".second-hand");
 const minuteHand = document.querySelector(".minute-hand");
 const hourHand = document.querySelector(".hour-hand");
 
+const dayHand = document.querySelector(".day-hand")
+
 
 //Update clock
 function updateClock(){
@@ -21,21 +23,23 @@ function updateClock(){
     // Get hours
     const hours = currentTime.getHours();
 
-    const hourDegree = (hours % 12) * 30 + minutes * 0.5;
+    // Get day
+    const day = currentTime.getDate();
 
-    console.log(hourDegree);
-
+    const hourDegree = (hours % 12) * 30 + minutes * 0.5;               
 
     //Convert seconds to degrees
     const secondDegree = second * 6;
-    const minuteDegree = minutes * 6;
+    // const minuteDegree = minutes * 6;
 
+    //Minute hand move smoothley
+    const minuteDegree = minutes * 6 + second * 0.1;
 
     // Rotate second hand
     secondHand.style.transform = `rotate(${secondDegree}deg)`;
     minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
     hourHand.style.transform = `rotate(${hourDegree}deg)`;
-
+    dayHand.textContent = day;
 }
 
 //Run imadiately
