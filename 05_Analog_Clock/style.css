@@ -134,7 +134,7 @@ body{
 
     font-size: 28px;
     color: firebrick;
-    padding: 10px;
+    padding: 9px 18px;
 }
 /* Add Dark Mode */
 #themeBtn{
@@ -172,3 +172,19 @@ body.dark .center{
     background-color: white;
 }
 
+/* Example Toggle */
+#toggleBtn{
+    background-color: yellow;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 5px;
+}
+#toggleBox{
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    background-color: red;
+}
+.hidden{
+    display: none;
+}

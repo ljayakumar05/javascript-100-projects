@@ -6,6 +6,18 @@ const hourHand = document.querySelector(".hour-hand");
 
 const dayHand = document.querySelector(".day-hand")
 
+const themeBtn = document.querySelector("#themeBtn");
+
+// Dark mode btn
+themeBtn.addEventListener("click", ()=>{
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")){
+        themeBtn.textContent = "Light Mode";
+    } else {
+        themeBtn.textContent = "Dark Mode";
+    }
+});
 
 //Update clock
 function updateClock(){
@@ -47,3 +59,11 @@ updateClock();
 
 //Update every second
 setInterval(updateClock, 1000);
+
+// toggle example
+const btn = document.getElementById("toggleBtn");
+const box = document.getElementById("toggleBox");
+
+btn.addEventListener('click', () => {
+    box.classList.toggle('hidden');
+});
