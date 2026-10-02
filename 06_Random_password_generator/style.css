@@ -45,12 +45,41 @@ body{
 }
 .submitBtn{
     margin-top: 20px;
+    margin-right: 15px;
     padding: 18px 15px;
-    width: 60%;
+    width: 48%;
     border-radius: 5px;
     border: none;
     font-size: 14px;
     font-weight: bold;
     background-color: #008c55;
     color: #FFFF;
+}
+.copyBtn{
+    margin-top: 20px;
+    padding: 18px 15px;
+    width: 45%;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #008c55;
+    color: #FFFF;
+}
+.alert-box {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 15px 25px;
+
+    background-color: white;
+    color: green;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
