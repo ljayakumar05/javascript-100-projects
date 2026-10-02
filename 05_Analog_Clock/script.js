@@ -59,11 +59,3 @@ updateClock();
 
 //Update every second
 setInterval(updateClock, 1000);
-
-// toggle example
-const btn = document.getElementById("toggleBtn");
-const box = document.getElementById("toggleBox");
-
-btn.addEventListener('click', () => {
-    box.classList.toggle('hidden');
-});

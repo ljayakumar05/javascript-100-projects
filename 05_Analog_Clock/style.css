@@ -172,19 +172,3 @@ body.dark .center{
     background-color: white;
 }
 
-/* Example Toggle */
-#toggleBtn{
-    background-color: yellow;
-    margin-left: 50px;
-    padding: 20px;
-    border-radius: 5px;
-}
-#toggleBox{
-    width: 150px;
-    height: 150px;
-    margin-left: 20px;
-    background-color: red;
-}
-.hidden{
-    display: none;
-}
