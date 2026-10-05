@@ -1,7 +1,7 @@
 const userPassword = document.getElementById("Password");
 const submitBtnValue = document.getElementById("submitBtn");
-
 const copyBtn = document.getElementById("copyBtn");
+const resetBtn = document.getElementById("resetBtn");
 
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
 
@@ -26,7 +26,12 @@ copyBtn.addEventListener('click', () => {
 
     // Create alert  
     setTimeout(() => {
-        alert(`your password successfully copyed ${userPassword.value}`);
+        alert(`your password successfully copyed (${userPassword.value})`);
     }, 2000);
 
+})
+
+resetBtn.addEventListener('click', () => {
+    console.log("btn clicked");
+    window.location.reload();
 })
