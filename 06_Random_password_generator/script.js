@@ -24,10 +24,9 @@ copyBtn.addEventListener('click', () => {
 
     console.log(`password ${userPassword.value} copyed.`);
 
-    // Create alert
-    
+    // Create alert  
+    setTimeout(() => {
+        alert(`your password successfully copyed ${userPassword.value}`);
+    }, 2000);
 
-    // alert(`your password successfully copyed ${userPassword.value}`);
-  })
-
-
+})
