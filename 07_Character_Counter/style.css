@@ -6,8 +6,7 @@
 .container{
     background: linear-gradient(135deg, #4203a9, #90bafc);
     height: 100vh;
-    max-width: 1200px;
-
+    width: auto;
     position: relative;
 }
 .head{
@@ -15,17 +14,27 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
-    padding-top: 60px;
+    padding-top: 90px;
+}
+.head h1{
+    padding-bottom: 15px;
+    text-decoration: underline;
 }
 .character_text{
     width: 400px;
     height: 200px;
+    box-shadow: 10px 10px 10px 5px;
+    font-size: 24px;
 
-    position: absolute;
-    top: 25%;
-    left: 23%;
+    display: block;
+    margin: 35px auto;
 }
-.text-limit{
-    
+.counter{
+    margin: 0 auto;
+    text-align: center;
+    width: 55%;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
 }
