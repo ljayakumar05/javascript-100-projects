@@ -1,10 +1,12 @@
+// Get Input from DOM
 const textarea = document.getElementById("message");
 const characterCount = document.getElementById("textCount");
 
-//Add Statistics
+//Add Statistics DOM
 const wordCount = document.getElementById("words");
 const totalWords = document.getElementById("totalWords");
 const noSpace = document.getElementById("NoSpace");
+const lineCount = document.getElementById("lineCount");
 
 textarea.addEventListener('input', () => {
     // Get value 
@@ -24,9 +26,15 @@ textarea.addEventListener('input', () => {
 
     totalWords.textContent = wordCharacters;
     
+    // Add NoSpace btn
     const nospaceText = textValue.replace(/\s/g, "");
     const nospaceCount = nospaceText.length;
 
     noSpace.textContent = nospaceCount;    
-    console.log(nospaceCount);
+
+    //Add Line count
+    const lineCountNum = textValue.split("\n").length;
+
+    lineCount.textContent = lineCountNum;
+    console.log(lineCountNum);  
 })

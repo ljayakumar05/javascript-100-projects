@@ -14,10 +14,10 @@
             <h1 class="header-text">Character Counter</h1>
             <h2>Counter Your characters in real time</h2>
         </div>
-        <textarea id="message" class="character_text"></textarea> 
+        <textarea id="message" class="character_text" maxlength="200"></textarea> 
         <div class="counter">
             <p>Characters:</p>
-            <p id="textCount">0 / 200</p>
+            <p id="textCount">0 / 300</p>
         </div>
         <h2 class="statistics-head">Statistics</h2>
         <div class="statistics">
@@ -32,6 +32,12 @@
             <div class="text-values">
                 <p class="value" id="totalWords">0</p>
                 <p>Words</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div class="text-values">
+                <p class="value" id="lineCount">0</p>
+                <p>Line Count</p>
             </div>
         </div>
     </div>
