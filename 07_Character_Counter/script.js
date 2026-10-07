@@ -21,7 +21,7 @@ textarea.addEventListener('input', () => {
 
     // Add characters Total Words
     const cleanText = textValue.trim();
-    const words = cleanText.split(" ");
+    const words = cleanText.split(/\s+/);
     const wordCharacters = words.length;
 
     totalWords.textContent = wordCharacters;
