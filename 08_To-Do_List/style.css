@@ -2,10 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #4203a9, #90bafc);
 } 
-.container{
+body{
     background: linear-gradient(135deg, #4203a9, #90bafc);
-    text-align: center;
-    padding-top: 30px;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: auto;
 }
+.container{
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    background-color: #ffff;
+    border-radius: 5px;
+}
+.list-box h2{
+    color: #213378;
+    padding: 30px 40px 15px 30px;
+}
+.list-box input{
+    margin: 5px 5px 10px 30px;
+    width: 250px;
+    height: 50px;
+}
+.list-box button{
+    width: 80px;
+    height: 50px;
+}
+
