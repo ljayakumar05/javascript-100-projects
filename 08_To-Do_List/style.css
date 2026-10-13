@@ -58,5 +58,10 @@ body{
 .todo-btn:hover{
     box-shadow: 5px 5px 8px;
 }
-
+.userTast{
+    padding-left: 50px;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
 
