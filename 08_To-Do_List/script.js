@@ -19,7 +19,5 @@ taskBtn.addEventListener("click", () => {
             taskAdd.textContent = userValues;
             taskList.appendChild(taskAdd);
             userInputs.value = ""
-
-            console.log('ok values');
         }
 });
