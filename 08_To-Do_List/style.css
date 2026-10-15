@@ -42,7 +42,7 @@ body{
     font-size: 17px;
     font-weight: bold;
 }
-.list-box button{
+.todoBtn{
     width: 80px;
     height: 50px;
     background-color: burlywood;
@@ -64,4 +64,28 @@ body{
     font-size: 18px;
     font-weight: bold;
 }
-
+.taskList{
+    width: 90%;
+    height: auto;
+    padding: 7px 10px;
+    border: 1px solid brown;
+}
+.task-delete-btn{
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    margin-left: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.task-delete-btn :hover{
+    background-color: #b71c1c;
+}
+.task-delete-btn :active{
+    transform: scale(0.96);
+}

@@ -14,10 +14,32 @@ taskBtn.addEventListener("click", () => {
 
         if (userValues === ""){
             console.log("please enter a task");
+            return;
         } else{
             const taskAdd = document.createElement("li");
             taskAdd.textContent = userValues;
             taskList.appendChild(taskAdd);
             userInputs.value = ""
+            // add class
+            taskAdd.classList.add("taskList")
+
+            // Add Delet btn
+            const deletBtn = document.createElement("button");
+            deletBtn.textContent = "Delete";
+            // Add elements to the task
+            taskAdd.appendChild(deletBtn);
+            // Add style to btn (ADD class)
+            deletBtn.classList.add("task-delete-btn");
+            // deletBtn.style.backgroundColor = "red";
+            // deletBtn.style.margin = "0 5px 0 60px"
+
+            // Delete selected task
+            deletBtn.addEventListener("click", () => {
+                taskAdd.remove();
+                console.log("task deleted");
+            });
+
+            
         }
 });
+
