@@ -14,6 +14,7 @@ taskBtn.addEventListener("click", () => {
 
         if (userValues === ""){
             console.log("please enter a task");
+            alert("Plz enter the value");
             return;
         } else{
             const taskAdd = document.createElement("li");
