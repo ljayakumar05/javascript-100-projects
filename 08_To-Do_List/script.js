@@ -2,6 +2,14 @@ const userInputs = document.getElementById("userInput");
 const taskBtn = document.getElementById("todoBtn");
 const taskList = document.getElementById("taskList");
 
+// 1. Load saved tasks form Local Storage
+let tasks = JSON.parse(localStorage.getItem("todoTasks")) || [];
+
+// 2. Save tasks to Local Strorage
+function saveTasks() {
+    localStorage.setItem("todoTasks", JSON.stringify(tasks));
+}
+
 // Get input value when typing
 userInputs.addEventListener("input", () => {
     const userValues = userInputs.value;
@@ -52,7 +60,7 @@ taskBtn.addEventListener("click", () => {
             })
 
             // Delete selected task
-            deletBtn.addEventListener("click", () => {
+            deletBtn.addEventListener("click", (event) => {
                 event.stopPropagation();
                 taskAdd.remove();
                 console.log("task deleted");
@@ -60,3 +68,33 @@ taskBtn.addEventListener("click", () => {
         }
 });
 
+taskBtn.addEventListener("click", () => {
+    const userValues = userInputs.value.trim();
+
+    if(userValues === "") {
+        alert("Please enter a task");
+        return;
+    }
+    tasks.push({
+        text: userValues,
+        completed: false
+    });
+
+    saveTasks();
+    displayTasks();
+
+    userInputs.value = "";
+});
+
+displayTasks();
+
+
+// Learn Local storage
+
+localStorage.setItem("name", "jai");
+localStorage.setItem("addred", "chennai");
+
+const name = localStorage.getItem("name");
+const address = localStorage.getItem("addred");
+
+testTask.textContent = name + "-" + address;
