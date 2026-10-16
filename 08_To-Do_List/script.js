@@ -34,13 +34,29 @@ taskBtn.addEventListener("click", () => {
             // deletBtn.style.backgroundColor = "red";
             // deletBtn.style.margin = "0 5px 0 60px"
 
+            // Add task completed 
+            taskAdd.addEventListener("click", () => {
+                taskAdd.classList.toggle("completed");
+
+                let taskCompleted = taskAdd.querySelector(".taskCompletedlist");
+
+                if(taskCompleted){
+                    taskCompleted.remove();
+                }else {
+                    taskCompleted = document.createElement("p");
+                    taskCompleted.classList.add("taskCompletedlist");
+                    taskCompleted.textContent = "Completed";
+
+                    taskAdd.appendChild(taskCompleted);
+                }
+            })
+
             // Delete selected task
             deletBtn.addEventListener("click", () => {
+                event.stopPropagation();
                 taskAdd.remove();
                 console.log("task deleted");
             });
-
-            
         }
 });
 

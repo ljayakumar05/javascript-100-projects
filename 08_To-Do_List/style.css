@@ -89,3 +89,16 @@ body{
 .task-delete-btn :active{
     transform: scale(0.96);
 }
+.completed{
+    text-decoration: line-through;
+    color: green;
+}
+.taskCompletedlist{
+    display: inline-block;
+    margin-left: 16px;
+    transition: all 1s ease;
+}
+.taskCompletedlist:hover{
+    color: red;
+    cursor: pointer;
+}
