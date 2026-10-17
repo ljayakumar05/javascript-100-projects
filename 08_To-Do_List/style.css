@@ -1,130 +1,101 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} 
-body{
-    background: linear-gradient(135deg, #4203a9, #90bafc);
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: auto;
 }
-.todo-head{
-    text-align: center;
-    padding-top: 50px;
-    color: white;
-    text-decoration: underline;
-    font-size: 18px;
-}
-.todo-head h2{
-    padding-bottom: 15px;
-}
-.container{
-    width: 400px;
-    height: 450px;
-    margin: 0 auto;
-    margin-top: 50px;
 
-    background-color: #ffff;
-    border-radius: 5px;
-    box-shadow: 20px 20px 30px;
+body {
+    min-height: 100vh;
+    padding: 30px 15px 50px;
+    background: linear-gradient(135deg, #4203a9, #90bafc);
+    font-family: Arial, sans-serif;
 }
-.list-box h2{
+
+.todo-head {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+.todo-head h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.todo-head h3 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.container {
+    width: min(100%, 480px);
+    min-height: 250px;
+    height: auto;
+    margin: 40px auto 0;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.list-box h2 {
     color: #213378;
-    padding: 30px 40px 15px 30px;
-    font-size: 18px;
+    margin-bottom: 20px;
+    font-size: 22px;
 }
-.list-box input{
-    margin: 1px 5px 10px 30px;
-    padding-left: 10px;
-    width: 250px;
-    height: 50px;
-    font-size: 17px;
-    font-weight: bold;
+
+.input-group {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
 }
-.todoBtn{
-    width: 80px;
-    height: 50px;
+
+.list-box input {
+    flex: 1;
+    min-width: 0;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.todoBtn {
+    padding: 0 12px;
     background-color: burlywood;
     border: none;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
-}
-.todoBtn{
     cursor: pointer;
-    transition: all 1s ease;
-}
-.todoBtn:hover{
-    box-shadow: 5px 5px 8px;
-}
-.userTast{
-    padding-left: 50px;
-    padding-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.taskList{
-    width: 90%;
-    height: auto;
-    padding: 7px 10px;
-    text-transform: capitalize;
-}
-.task-delete-btn{
-    background-color: #e53935;
-    color: white;
-    border: none;
-    padding: 8px 10px;
-    margin-left: 12px;
-    margin-top: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
     transition: background-color 0.3s ease;
 }
-.task-delete-btn :hover{
-    background-color: #b71c1c;
-}
-.task-delete-btn :active{
-    transform: scale(0.96);
-}
-.completed{
-    font-size: 17px;
-    text-decoration: line-through;
-    color: green;
-}
-.taskCompletedlist{
-    display: inline-block;
-    margin-left: 16px;
-    transition: all 1s ease;
-}
-.taskCompletedlist:hover{
-    color: red;
-    cursor: pointer;
+
+.todoBtn:hover {
+    background-color: #d2a76e;
 }
 
-/* test */
-
-#taskList {
+.userTask {
     padding-left: 25px;
+    margin-top: 20px;
 }
 
-#taskList li {
+.taskList {
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 6px;
-    cursor: pointer;
+    border-radius: 5px;
     overflow-wrap: anywhere;
+    cursor: pointer;
+    line-height: 1.5;
 }
 
-#taskList li.completed {
-    text-decoration: line-through;
-    color: gray;
-    opacity: 0.7;
+.taskList:hover {
+    background-color: #f3f4f8;
 }
 
 .task-delete-btn {
+    display: inline-block;
     background-color: #e53935;
     color: white;
     border: none;
@@ -132,8 +103,40 @@ body{
     margin-left: 12px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
 }
 
 .task-delete-btn:hover {
     background-color: #b71c1c;
+}
+
+.task-delete-btn:active {
+    transform: scale(0.96);
+}
+
+.taskList.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 18px;
+    }
+
+    .todo-head h2 {
+        font-size: 23px;
+    }
+
+    .todo-head h3 {
+        font-size: 14px;
+    }
+
+    .task-delete-btn {
+        margin-left: 5px;
+        padding: 6px 8px;
+    }
 }
