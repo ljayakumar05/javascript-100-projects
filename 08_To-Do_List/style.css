@@ -62,7 +62,8 @@ body {
 }
 
 .todoBtn {
-    padding: 0 12px;
+    padding: 14px 12px;
+    margin-left: 8px;
     background-color: burlywood;
     border: none;
     border-radius: 5px;
@@ -83,7 +84,9 @@ body {
 
 .taskList {
     padding: 10px;
+    margin-top: 8px;
     margin-bottom: 10px;
+    margin-left: 15px;
     border-radius: 5px;
     overflow-wrap: anywhere;
     cursor: pointer;
@@ -92,6 +95,12 @@ body {
 
 .taskList:hover {
     background-color: #f3f4f8;
+}
+
+.completed-text {
+    margin-left: 20px;
+    color: green;
+    text-decoration: none;
 }
 
 .task-delete-btn {

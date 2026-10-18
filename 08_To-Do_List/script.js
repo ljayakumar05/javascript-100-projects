@@ -14,31 +14,48 @@ function saveTasks() {
 function displayTasks() {
     taskList.innerHTML = "";
 
+    // Loop through every task
     tasks.forEach((task, index) => {
 
         // Create task element
         const taskAdd = document.createElement("li");
         taskAdd.classList.add("taskList");
 
-        taskAdd.textContent = task.text;
-
-        // Show completed style if task is completed
-        if (task.completed) {
-            taskAdd.classList.add("completed");
-        }
-
-        // Mark task as completed or pending
-        taskAdd.addEventListener("click", () => {
-            tasks[index].completed = !tasks[index].completed;
-
-            saveTasks();
-            displayTasks();
-        });
+        // Add task text
+        taskAdd.appendChild(document.createTextNode(task.text));
 
         // Create Delete button
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
         deleteBtn.classList.add("task-delete-btn");
+
+        // Create Completed label
+        const completedText = document.createElement("span");
+        completedText.textContent = "Completed";
+        completedText.classList.add("completed-text");
+
+        // Show line-through and Completed label
+        if(task.completed){
+            taskAdd.classList.add("completed");
+            taskAdd.appendChild(deleteBtn);
+            taskAdd.appendChild(completedText);
+        }else {
+            taskAdd.appendChild(deleteBtn);
+        }
+
+        // Click task to mark completed or pending
+        taskAdd.addEventListener("click", (event) => {
+
+            // Ingnore Clicks on the Delete button
+            if(event.target === deleteBtn){
+                return;
+            }
+
+            tasks[index].completed = !tasks[index].completed;
+
+            saveTasks();
+            displayTasks();
+        })
 
         // Delete selected task
         deleteBtn.addEventListener("click", (event) => {
@@ -48,44 +65,42 @@ function displayTasks() {
 
             saveTasks();
             displayTasks();
-
-            console.log("Task deleted");
         });
-
-        // Add Delete button to task
-        taskAdd.appendChild(deleteBtn);
 
         // Add task to the list
         taskList.appendChild(taskAdd);
     });
 }
 
-// 4. Add a new task
-taskBtn.addEventListener("click", () => {
-    const userValues = userInputs.value.trim();
+    // 4. Add a new task
+    taskBtn.addEventListener("click", () => {
 
-    if (userValues === "") {
-        alert("Please enter a task");
-        return;
-    }
+        // Get input and remove extra spaces
+        const userValues = userInputs.value.trim();
 
-    // Create task object
-    const newTask = {
-        text: userValues,
-        completed: false
-    };
+        // Prevent empty tasks
+        if(userValues === ""){
+            alert("Please enter a task");
+            return;
+        }
 
-    // Add task to array
-    tasks.push(newTask);
+        // Create task object
+        const newTask = {
+            text: userValues,
+            completed: false
+        };
 
-    // Save and display tasks
-    saveTasks();
+        // Add task to array
+        tasks.push(newTask);
+
+        // Save and display tasks
+        saveTasks();
+        displayTasks();
+
+        // Clear input and focus
+        userInputs.value = "";
+        userInputs.focus();
+    });
+
+    // 5. Display saved tasks when page opens
     displayTasks();
-
-    // Clear input
-    userInputs.value = "";
-    userInputs.focus();
-});
-
-// 5. Display saved tasks when page opens
-displayTasks();
