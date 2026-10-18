@@ -1,6 +1,7 @@
 const userInputs = document.getElementById("userInput");
 const taskBtn = document.getElementById("todoBtn");
 const taskList = document.getElementById("taskList");
+const clearBtn = document.getElementById("clearBtn");
 
 // 1. Load saved tasks from Local Storage
 let tasks = JSON.parse(localStorage.getItem("todoTasks")) || [];
@@ -104,3 +105,17 @@ function displayTasks() {
 
     // 5. Display saved tasks when page opens
     displayTasks();
+
+    clearBtn.addEventListener("click", () => {
+        const confirmClear = confirm("Are you sure you want to delete all tasks?");
+
+        if(confirmClear){
+            tasks = [];
+
+            localStorage.removeItem("todoTasks");
+
+            displayTasks();
+        }else {
+            console.log("not ok");
+        }
+    });

@@ -77,6 +77,22 @@ body {
     background-color: #d2a76e;
 }
 
+.clearBtn {
+    padding: 14px 12px;
+    margin-left: 8px;
+    background-color: burlywood;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clearBtn:hover {
+    background-color: #d2a76e;
+}
+
 .userTask {
     padding-left: 25px;
     margin-top: 20px;
