@@ -1,0 +1,64 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    padding: 30px 15px 50px;
+    background: linear-gradient(135deg, #4203a9, #90bafc);
+    font-family: Arial, sans-serif;
+}
+.stopwatch-head{
+    text-align: center;
+    margin-top: 40px;
+}
+.stopwatch-head h2{
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: 42px;
+} 
+.headText{
+    color: lightcoral;
+    text-decoration: underline;
+}
+.watchContainer{
+    width: 550px;
+    height: 280px;
+    margin: 40px auto;
+    background-color: #202938;
+    border-radius: 5px;
+}
+.timer{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 72px;
+    font-weight: 800;
+    color: aliceblue;
+    padding-top: 40px;
+}
+.counterBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+}
+.counterBtn button{
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #06C3ED;
+    color: #1D2D49;
+    cursor: pointer;
+}
+.counterBtn button:hover{
+    box-shadow: 5px 5px 5px;
+    color: azure;
+}
