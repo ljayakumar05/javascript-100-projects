@@ -59,6 +59,6 @@ body {
     cursor: pointer;
 }
 .counterBtn button:hover{
-    box-shadow: 5px 5px 5px;
+    box-shadow: 5px 4px 5px;
     color: azure;
 }
