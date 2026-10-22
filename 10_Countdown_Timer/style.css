@@ -33,24 +33,24 @@ body {
 .countContainer{
     margin: 50px auto;
     width: 550px;
-    height: 400px;
+    height: 500px;
     border-radius: 10px;
-    background-color: aliceblue;
-}
-.countHead{
-    color: rgb(33, 33, 87);
-    text-align: center;
-    padding: 30px 0 10px 0;
+    background-color: rgb(205, 216, 247);
 }
 .countHeadtwo{
     text-align: center;
-    font-size: 16px;
+    font-size: 32px;
+    padding-top: 38px;
+    text-decoration: underline;
     color: rgb(33, 33, 87);
 }
 .timeSet{
     display: flex;
     justify-content: space-evenly;
     gap: 8px;
+}
+.setInput{
+    text-align: center;
 }
 .setInput p{
     color: rgb(33, 33, 87);
@@ -68,8 +68,74 @@ body {
     text-align: center;
 }
 .timeDisplay{
-    width: 250px;
-    height: 150px;
-    margin: 20px auto;
-    border: 1px solid red;
+    width: 400px;
+    height: 120px;
+    margin: 30px auto;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 10px;
 }
+.displayTime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 82px;
+    padding-top: 12px;
+    color: #1e0c83;
+}
+.controlBtn{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.timeBtn{
+    height: 50px;
+    width: 110px;
+    margin: 8px 5px;
+    border-radius: 10px;
+    border: none;
+}
+.btnStart{
+    background-color: rgb(27, 196, 27);
+    color: #FFFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btnPause{
+    background-color: rgb(63, 70, 6);
+    color: #FFFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btnReset{
+    background-color: rgb(231, 49, 49);
+    color: #FFFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btnStart:hover,
+ .btnPause:hover, 
+ .btnReset:hover{
+    box-shadow: 10px 10px 10px black;
+    border: 1px solid white;
+    transform: translateY(-3px);
+}
+.btnStart:active,
+.btnPause:active,
+.btnReset:active{
+    transform: translateY(2px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+

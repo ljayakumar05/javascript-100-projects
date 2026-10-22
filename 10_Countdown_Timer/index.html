@@ -13,27 +13,32 @@
         <h2>Countdowm <span class="headText">Timer</span></h2>
     </div> 
     <div class="countContainer">
-        <h1 class="countHead">Countdown Timer</h1>
         <h3 class="countHeadtwo">Set your time and stay focused</h3>
         <!-- Set time input -->
         <div class="timeSet">
             <div class="setInput">
                 <p>Hours</p>
-                <input type="number" id="input" class="input" min="0" max="59" value="1">
+                <input type="number" id="input" class="input" min="0" max="59" value="0">
             </div>
             <div class="setInput">
                 <p>Minutes</p>
-                <input type="number" id="input" class="input" min="0" max="59" value="1">
+                <input type="number" id="input" class="input" min="0" max="59" value="0">
             </div>
             <div class="setInput">
                 <p>Seconds</p>
-                <input type="number" id="input" class="input" min="0" max="59" value="1">
+                <input type="number" id="input" class="input" min="0" max="59" value="0">
             </div>
         </div>
         <!-- Time display -->
          <div class="timeDisplay">
-            <p>00 : 00</p>
+            <p class="displayTime">00 : 00</p>
          </div>
+         <!-- Time control button -->
+         <div class="controlBtn">
+            <button class="timeBtn btnStart">Start</button>
+            <button class="timeBtn btnPause">Pause</button>
+            <button class="timeBtn btnReset">Reset</button>
+         </div> 
     </div>
   
     <script src="/10_Countdown_Timer/script.js"></script> 
