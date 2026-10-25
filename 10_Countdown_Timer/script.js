@@ -7,6 +7,7 @@ const timer = document.getElementById("timer");
 const startBtn = document.getElementById("startBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const resetBtn = document.getElementById("resetBtn");
+const fullresetBtn = document.getElementById("fullresetBtn");
 
 const message = document .getElementById("message");
 
@@ -65,6 +66,8 @@ startBtn.addEventListener("click", () => {
             updateTimer();
             message.textContent = "Time's up!";
             message.style.color = "green";
+
+            playAlarm();
         }
     }, 1000);
 
@@ -91,3 +94,29 @@ resetBtn.addEventListener("click", () => {
 
 // Show the initial time
 updateTimer();
+
+// Full reset btn
+
+fullresetBtn.addEventListener("click", () => {
+    window.location.reload();
+});
+
+// Sound time end
+function playAlarm() {
+    const audioContext = new AudioContext();
+
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.frequency.value = 800;
+    oscillator.type = "sine";
+
+    gainNode.gain.value = 0.3;
+
+    oscillator.start();
+
+    oscillator.stop(audioContext.currentTime + 1);
+}

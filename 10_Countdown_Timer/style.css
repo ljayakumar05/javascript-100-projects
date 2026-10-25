@@ -98,7 +98,7 @@ body {
 .btnStart{
     background-color: rgb(27, 196, 27);
     color: #FFFF;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     padding-top: 2px;
     text-transform: uppercase;
@@ -108,7 +108,7 @@ body {
 .btnPause{
     background-color: rgb(63, 70, 6);
     color: #FFFF;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     padding-top: 2px;
     text-transform: uppercase;
@@ -116,9 +116,19 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btnReset{
+    background-color: rgb(231, 49, 29);
+    color: #FFFF;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fullresetBtn{
     background-color: rgb(231, 49, 49);
     color: #FFFF;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     padding-top: 2px;
     text-transform: uppercase;
@@ -127,14 +137,16 @@ body {
 }
 .btnStart:hover,
  .btnPause:hover, 
- .btnReset:hover{
+ .btnReset:hover,
+ .fullresetBtn:hover{
     box-shadow: 10px 10px 10px black;
     border: 1px solid white;
     transform: translateY(-3px);
 }
 .btnStart:active,
 .btnPause:active,
-.btnReset:active{
+.btnReset:active,
+.fullresetBtn:active{
     transform: translateY(2px);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
