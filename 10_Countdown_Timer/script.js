@@ -120,3 +120,14 @@ function playAlarm() {
 
     oscillator.stop(audioContext.currentTime + 1);
 }
+
+resetBtn.addEventListener("click", () => {
+    const audioContext = new AudioContext();
+    const oscillator = audioContext.createOscillator();
+
+    oscillator.connect(audioContext.destination);
+    oscillator.frequency.value = 800;
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + 0.2);
+});
