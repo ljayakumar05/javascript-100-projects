@@ -6,6 +6,51 @@
 body { 
     min-height: 100vh;
     padding: 30px 15px 50px;
-    background: linear-gradient(135deg, #1e0c83, #ffadc2);
+    background: linear-gradient(135deg, #bbc8fe, #ffadc2);
     font-family: Arial, sans-serif;
+}
+.container{
+    border: 1px solid #f0d8d8;
+    background-color: #fff;
+    width: 550px;
+    height: 300px;
+    margin: 150px auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 51px black;
+}
+.quoteTitle{
+    color: rgb(103, 88, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+}
+.quoteMessage{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.quoteAuther{
+    text-align: right;
+    padding-right: 60px;
+    padding-top: 30px;
+}
+.quotBtn{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.nextBtn{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.shareBtn{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
 }
