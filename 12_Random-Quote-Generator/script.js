@@ -1,7 +1,6 @@
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 const newQuote = document.getElementById("newQuote");
-const tweet = document.getElementById("tweet");
 const userId = document.getElementById("userId");
 
 async function getRandomQuote() {

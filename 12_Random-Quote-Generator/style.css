@@ -25,16 +25,21 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 30px;
+    text-decoration: underline;
 }
 .quoteMessage{
     text-align: center;
     width: 80%;
     margin: 0 auto;
     padding-top: 28px;
+    font-size: 22px;
 }
 .quoteAuther{
     text-align: right;
     padding-right: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 15px;
 }
 .quotBtn{
     display: flex;
@@ -44,13 +49,24 @@ body {
     margin-bottom: 20px;
 }
 .nextBtn{
-    width: 120px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 20px;
     border-radius: 25px;
     background-color: rgb(11, 111, 145);
     color: #fff;
     border: 1px solid rgb(11, 111, 145);
     cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+.nextBtn:hover{
+    box-shadow: 10px 10px 15px black;
+    transform: translateY(-2px)
+}
+.nextBtn:active{
+    box-shadow: 10px 10px 15px black;
+    transform: translateY(3px)
 }
 .shareBtn{
     width: 120px;
@@ -63,6 +79,9 @@ body {
 }
 .userId{
     text-align: center;
-    margin-top: 30px;
-
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 10px;
 }
