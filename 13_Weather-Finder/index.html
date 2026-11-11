@@ -8,8 +8,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome</h1>    
+    <div class="card">
+       <div class="search">
+            <input type="text" id="cityInput" placeholder="enter city name" spellcheck="false">
+            <button id="searchBtn"><img src="img/search.png" class="searchLogo"></button>
+        <div class="weatherLogo">    
+            <img src="img/clouds.png" id="weatherIcon" alt="Weather">
+        </div>
+        <div class="weatherLevel"> 
+            <p class="WeatherPesantage" id="temperature">1°C</p>
+            <p id="condition">Partly Cloudy</p>
+            <p class="WeatherLocation" id="cityName">Chennai</p>   
+        </div>    
+
+        <div class="wthInfo">
+            <div class="HumidityLevle">
+                <div class="HumImg">
+                    <img src="img/humidity.png">
+                </div>
+                <div class="HumLevel">
+                    <h3 id="humidity">100%</h3>
+                    <p>Humidity<p> 
+                </div>        
+            </div>
+            <div class="windLevle">
+                <div class="windImg">
+                    <img src="img/wind.png">
+                </div>
+                <div class="windValue">
+                    <h3 id="windSpeed">1.85 Km/h</h3>
+                    <p>Wind Speed<p> 
+                </div>        
+            </div>
+        </div>    
+        </div>
+       </div>     
     </div> 
 
     <script src="script.js"></script>
