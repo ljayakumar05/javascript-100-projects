@@ -12,6 +12,50 @@ const windSpeed = document.getElementById("windSpeed");
 
 console.log("Weather App API Connected!")
 
+function getWeatherCondition(code) {
+    switch(code) {
+        case 0: return "clear sky";
+        case 1: return "Mainly Clear";
+        case 2: return "Partly Cloudy";
+        case 3: return "Overcast";
+
+        case 45:
+        case 48: return "Fog";
+
+        case 51:
+        case 53:
+        case 55: return "Drizzle";
+
+        case 56:
+        case 57: return "Freezing Drizzle";
+
+        case 61:
+        case 63:
+        case 65: return "Rain";
+
+        case 66:
+        case 67: return "Freezing Rain";
+
+        case 71:
+        case 73:
+        case 75:
+        case 77: return "Snow";
+
+        case 80:
+        case 81:
+        case 82: return "Rain Showers";
+
+        case 85:
+        case 86: return "Snow Showers";
+
+        case 95:
+        case 96:
+        case 99: return "Thunderstorm";
+
+        default: return "Unknown Weather";
+    }
+}
+
 async function getWeather(){
     try{
 
@@ -62,6 +106,16 @@ async function getWeather(){
         // Get Current Weather
         const current = liveweatherData.current;
 
+        // Get Weather condition
+        const weatherCondition = getWeatherCondition(current.weather_code);
+
+        // Get weather icon
+        const icon = getWeatherIcon(current.weather_code);
+
+        // Display condition and icon
+        condition.textContent = weatherCondition;
+        weatherIcon.src = icon;
+
         // Display Weather data
         temperature.textContent = `${current.temperature_2m}°C`;
         cityName.textContent = city;
@@ -75,6 +129,38 @@ async function getWeather(){
         alert(error.message);
     }
 }
+
+function getWeatherIcon(code) {
+
+    if(code === 0 || code === 1){
+        return "img/clear.png";
+    }
+    else if (code === 2 || code === 3){
+        return "img/clouds.png";
+    }
+    else if (code === 45 || code === 48){
+        return "img/mist.png";
+    }
+    else if(code >= 51 && code <= 57){
+        return "img/drizzle.png";
+    }
+    else if(code >= 61 && code <= 67){
+        return "img/rain.png";
+    }
+    else if(code >= 71 && code <= 77){
+        return "img/snow.png";
+    }
+    else if(code >= 80 && code <= 82){
+        return "img/rain.png";
+    }
+    else if(code >= 95 && code <= 99){
+        return "img/rain.png";
+    }
+    else{
+        return "img/clouds.png";
+    }
+}
+getWeatherIcon();
 
 searchBtn.addEventListener("click", getWeather);
 
