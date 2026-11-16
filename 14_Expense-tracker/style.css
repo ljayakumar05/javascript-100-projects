@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {  
+    min-height: 100vh;
+    height: 80vh; 
+    padding: 30px 15px 50px;
+    background: linear-gradient(135deg, #bbc8fe, #3e22de);
+    font-family: Arial, sans-serif;
+}
+.container{
+    margin: 150px auto;
+    width: 750px;
+    height: 500px;
+    border: 1px solid gray;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+.trackerHeader{
+    margin: 20px auto;
+    text-align: center;
+}
+.trackerNavmenu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.navMenu{
+    border: 1px solid gray;
+    height: 60px;
+    width: 190px;
+    border-radius: 5px;
+    text-align: left;
+}
+.mainSection{
+    display: flex;
+    justify-content: space-evenly;
+}
+.recentTracker{
+    border: 1px solid gray;
+    width: 320px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.newTracker{
+    border: 1px solid gray;
+    width: 320px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.one{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-bottom: 1px solid gray;
+}
