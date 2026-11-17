@@ -58,4 +58,25 @@ body {
     justify-content: space-between;
     padding: 10px 10px;
     border-bottom: 1px solid gray;
+    margin-top: 10px;
+}
+.trackerHead{
+    text-align: left;
+}
+.amountTrack{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.amountTrack input{
+    width: 290px;
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+.addBtn{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
 }
